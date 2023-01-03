@@ -241,7 +241,7 @@
           font-size: 7.5rem;
         }
       }
-      @media only screen and (max-width: 700px) {
+      @media only screen and (max-width: 700px) and (min-width: 501px) {
         .sections {
           width: 100px;
           height: 100px;
@@ -257,6 +257,27 @@
         .face {
           grid-template-columns: 18px 18px 18px 18px 18px;
           grid-template-rows: 18px 18px 18px 18px 18px;
+        }
+      }
+      @media only screen and (max-width: 500px) {
+        #title {
+          font-size: 3.5rem;
+        }
+        .sections {
+          width: 80px;
+          height: 80px;
+        }
+        .parts {
+          font-size: 4rem;
+        }
+        #scene {
+          width: 72px;
+          height: 72px;
+          margin: 2rem 1rem;
+        }
+        .face {
+          grid-template-columns: 15px 15px 15px 15px 15px;
+          grid-template-rows: 15px 15px 15px 15px 15px;
         }
       }
     </style>
