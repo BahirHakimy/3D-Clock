@@ -1,4 +1,3 @@
 # 3D-Clock
 
-Simple flipping clock made with HTML/CSS/JS
-:)))
+### Simple flipping clock made with HTML/CSS/JS
