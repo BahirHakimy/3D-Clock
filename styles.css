@@ -135,7 +135,7 @@ body {
 
 #spinWise {
   animation: spinWise 2s linear infinite;
-  transform: translateZ(-150px) rotateZ(45deg) rotateY(-360deg);
+  transform: translateZ(-150px) rotateZ(45deg);
 }
 
 .face {
