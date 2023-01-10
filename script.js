@@ -19,7 +19,7 @@ function flip(target) {
   }
 
   next.textContent = val;
-  let value = val === 'AM' ? 'PM' : 'AM';
+  const value = val === 'AM' ? 'PM' : 'AM';
   panel.innerHTML = `<div class='parts parts-front'>${
     target !== 'ind' ? zfill(val - 1) : value
   }</div>
@@ -39,7 +39,7 @@ function start() {
     second: date.getSeconds(),
     ind: date.getHours() >= 12 ? 'PM' : 'AM',
   };
-  let hourValue = time.hour > 12 ? time.hour - 12 : time.hour;
+  const hourValue = time.hour > 12 ? time.hour - 12 : time.hour;
   $('#hour-next').innerText = zfill(hourValue);
   $('#hour-bottom').innerText = zfill(hourValue);
   $('#minute-next').innerText = zfill(time.minute);
