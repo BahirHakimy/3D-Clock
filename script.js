@@ -7,7 +7,7 @@ function flip(target) {
   const next = document.getElementById(`${target}-next`);
   const panel = document.getElementById(`${target}-panel`);
   const bottom = document.getElementById(`${target}-bottom`);
-
+  let val = 0;
   if (target === 'hour') {
     val = next.textContent - 0 + 1 <= 12 ? next.textContent - 0 + 1 : 1;
     val = zfill(val);
@@ -19,8 +19,9 @@ function flip(target) {
   }
 
   next.textContent = val;
+  let value = val === 'AM' ? 'PM' : 'AM';
   panel.innerHTML = `<div class='parts parts-front'>${
-    target !== 'ind' ? zfill(val - 1) : val === 'AM' ? 'PM' : 'AM'
+    target !== 'ind' ? zfill(val - 1) : value
   }</div>
       <div class='parts parts-back'>${val}</div>`;
   panel.classList.toggle('flip');
@@ -38,12 +39,9 @@ function start() {
     second: date.getSeconds(),
     ind: date.getHours() >= 12 ? 'PM' : 'AM',
   };
-  $('#hour-next').innerText = zfill(
-    time.hour > 12 ? time.hour - 12 : time.hour
-  );
-  $('#hour-bottom').innerText = zfill(
-    time.hour > 12 ? time.hour - 12 : time.hour
-  );
+  let hourValue = time.hour > 12 ? time.hour - 12 : time.hour;
+  $('#hour-next').innerText = zfill(hourValue);
+  $('#hour-bottom').innerText = zfill(hourValue);
   $('#minute-next').innerText = zfill(time.minute);
   $('#minute-bottom').innerText = zfill(time.minute);
   $('#second-next').innerText = zfill(time.second);
