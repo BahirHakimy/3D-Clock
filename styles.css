@@ -135,7 +135,7 @@ body {
 
 #spinWise {
   animation: spinWise 2s linear infinite;
-  transform: translateZ(-150px) rotateZ(45deg) rotateY(-360);
+  transform: translateZ(-150px) rotateZ(45deg) rotateY(-360deg);
 }
 
 .face {
@@ -245,21 +245,25 @@ body {
     transform: translateZ(-150px) rotateZ(45deg) rotateY(360deg);
   }
 }
+
 @keyframes spinWise {
   to {
     transform: translateZ(-150px) rotateZ(45deg) rotateY(-360deg);
   }
 }
+
 @keyframes spin3d {
   to {
     transform: translateZ(-150px) rotate3d(1, 1, 1, -360deg);
   }
 }
+
 @media only screen and (max-width: 900px) and (min-width: 700px) {
   .sections {
     width: 150px;
     height: 150px;
   }
+
   .parts {
     font-size: 7.5rem;
   }
@@ -270,14 +274,17 @@ body {
     width: 100px;
     height: 100px;
   }
+
   .parts {
     font-size: 5rem;
   }
+
   #scene {
     width: 90px;
     height: 90px;
     margin: 2rem 1.5rem;
   }
+
   .face {
     grid-template-columns: 18px 18px 18px 18px 18px;
     grid-template-rows: 18px 18px 18px 18px 18px;
@@ -288,18 +295,22 @@ body {
   #title {
     font-size: 3.5rem;
   }
+
   .sections {
     width: 80px;
     height: 80px;
   }
+
   .parts {
     font-size: 4rem;
   }
+
   #scene {
     width: 72px;
     height: 72px;
     margin: 2rem 1rem;
   }
+
   .face {
     grid-template-columns: 15px 15px 15px 15px 15px;
     grid-template-rows: 15px 15px 15px 15px 15px;
